@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;                 
+
+}
+body{
+    background-image: url('img/imagemdefundo.jpeg.jpg');
+    height: 100%;  
+}
+header{
+    background-color: white;
+    padding: 20px 40px;
+    color: #16507b;
+
+}
+
+hr{
+    color: #16507b;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 25px;
+}    
+
+.formulario{
+    width: 60%;
+    margin-left: 15%;
+    height: 100%; 
+    margin-left: 20%;
+    padding-top:5%;
+    padding-left:15%;
+    background-color:#032136;
+    padding-bottom: 60px;
+    border-radius: 15px;
+}
+
+.formulario input{
+    width: 70%;
+    height: 35px;
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+
+.env:hover{
+   background-color: yellowgreen;
+}
+
+.formulario label{
+    font-size: 16px;
+    color: white;
+}
+
+#val{
+    margin: 5% 7%;
+    background-color: rgb(55, 110, 0);
+    color: rgb(255, 255, 255);
+    width: 70px;
+    height: 25px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#val:hover{
+    background-color: rgb(102, 204, 0);
+}
+footer hr{ 
+    color: #16507b;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 25px;
+}
+
+
+.rodape{
+    background-color: #030a0f;
+    color:azure;
+    text-align: center;
+    margin-top: 5px;
+    padding-top: 15px;
+    padding-bottom: 25px;   
+    
+}
+
+@media screen and (max-width: 768px){
+    .formulario input{
+        width: 90%;
+        height: 30px;
+        border-radius: 8px;
+        padding-left: 5%;
+    }
+
+ 
+}
+

@@ -1,0 +1,43 @@
+<?php
+
+// stanciando a classe da conexao atraves de require_once
+    require_once 'model.php';
+    $u = new usuario;
+
+
+        //  CADASTRAMENTO DE USUARIO.
+
+        // isset() verifica a existencia de uma variavel, 
+
+if(isset($_POST['nome'])){
+        
+    // usando addslashes(), para se prevenir contra ataques rakers 
+    $nome   = addslashes($_POST['nome']);
+    $email = addslashes($_POST['email']);
+    $telefone = addslashes($_POST['telefone']);
+    $check_in = addslashes($_POST['checkin']);
+    $check_out = addslashes($_POST['checkout']);
+    $diarias = addslashes($_POST['diarias']);
+    $adultos = addslashes($_POST['adultos']);
+    $criancas = addslashes($_POST['criancas']);
+
+  //  verificando se a variavel nao esta vazia, atraves da funcao empty()
+         if(!empty($nome) && !empty($email) && !empty($telefone) && !empty($check_in) && !empty($check_out) && !empty($diarias) && !empty($adultos) && !empty($criancas)){
+           
+            $pdo = $u->conect("SysHotel", "187.108.201.193:3306", "sistema", "sistema"); 
+
+            if ($u->cadastro($nome, $email, $telefone, $check_in, $check_out, $diarias, $adultos, $criancas)){
+                
+            }else{
+                echo"Error";  
+            }
+         
+        
+        }else {
+            // echo "Preencha os Campos";
+        }
+}
+else{
+    // echo "Problema aqui";
+}
+?>
